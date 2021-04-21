@@ -1,0 +1,24 @@
+PODS:
+  - Gemini (1.4.0)
+  - Hero (1.5.0)
+  - SPAlert (3.0.3)
+
+DEPENDENCIES:
+  - Gemini
+  - Hero
+  - SPAlert
+
+SPEC REPOS:
+  trunk:
+    - Gemini
+    - Hero
+    - SPAlert
+
+SPEC CHECKSUMS:
+  Gemini: 4ad915cca8805577fe3021e02feeca2b77dcdbfc
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  SPAlert: f01599d5224e93547cbb9364b2c42e88074644b9
+
+PODFILE CHECKSUM: 7367f24f30867d85d0a648b95de25b6de0738b5e
+
+COCOAPODS: 1.10.0
