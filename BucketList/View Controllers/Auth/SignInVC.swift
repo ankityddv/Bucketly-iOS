@@ -5,6 +5,7 @@
 //  Created by ANKIT YADAV on 24/04/21.
 //
 
+import Hero
 import UIKit
 
 class SignInVC: UIViewController {
@@ -16,7 +17,7 @@ class SignInVC: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hero.isEnabled = true
     }
     
 }
