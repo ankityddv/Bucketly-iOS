@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		149275FFA4C9D40549C80393 /* Pods_BucketList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91CC5EBF2DDF5D46642263A /* Pods_BucketList.framework */; };
+		366476792634116B00767AA6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476782634116B00767AA6 /* SignUpVC.swift */; };
+		3664767C2634117800767AA6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664767B2634117800767AA6 /* SignInVC.swift */; };
+		366476812634161300767AA6 /* TDCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476802634161300767AA6 /* TDCTextField.swift */; };
+		36647684263419BE00767AA6 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36647683263419BE00767AA6 /* AuthState.swift */; };
+		36647688263419E000767AA6 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36647687263419E000767AA6 /* SignInWithAppleManager.swift */; };
+		3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664768B26341A6000767AA6 /* AppleIDAuthButton.swift */; };
+		3664768F26341AD200767AA6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664768E26341AD200767AA6 /* UserDefaults.swift */; };
+		3664769226341CBE00767AA6 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664769126341CBE00767AA6 /* DropShadow.swift */; };
 		3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685A37F2630429C00D48167 /* AttributedFontExtention.swift */; };
 		369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */; };
 		36B7DA8A26304004007F8487 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */; };
@@ -35,6 +43,14 @@
 /* Begin PBXFileReference section */
 		2FEE38403D55CE9CE20F8FE0 /* Pods-BucketList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.release.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.release.xcconfig"; sourceTree = "<group>"; };
 		30D412906C0CA7497C3A1CD5 /* Pods-BucketList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.debug.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.debug.xcconfig"; sourceTree = "<group>"; };
+		366476782634116B00767AA6 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3664767B2634117800767AA6 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		366476802634161300767AA6 /* TDCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCTextField.swift; sourceTree = "<group>"; };
+		36647683263419BE00767AA6 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		36647687263419E000767AA6 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
+		3664768B26341A6000767AA6 /* AppleIDAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDAuthButton.swift; sourceTree = "<group>"; };
+		3664768E26341AD200767AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		3664769126341CBE00767AA6 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		3685A37F2630429C00D48167 /* AttributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedFontExtention.swift; sourceTree = "<group>"; };
 		369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringCVCell.swift; sourceTree = "<group>"; };
 		36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -88,7 +104,10 @@
 			children = (
 				36B7DA8C26304014007F8487 /* Fonts */,
 				3685A37F2630429C00D48167 /* AttributedFontExtention.swift */,
+				3664769126341CBE00767AA6 /* DropShadow.swift */,
 				36B7DAA4263040B2007F8487 /* Manager.swift */,
+				3664768E26341AD200767AA6 /* UserDefaults.swift */,
+				366476802634161300767AA6 /* TDCTextField.swift */,
 				36DA43AD262F2744009BA260 /* AppDelegate.swift */,
 				36DA43AF262F2744009BA260 /* SceneDelegate.swift */,
 				36DA43B9262F2746009BA260 /* Assets.xcassets */,
@@ -101,8 +120,29 @@
 			isa = PBXGroup;
 			children = (
 				369CEF3A26304A5D009A6A17 /* Onboarding */,
+				3664767E2634117E00767AA6 /* Auth */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3664767E2634117E00767AA6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				36647686263419C200767AA6 /* Services */,
+				366476782634116B00767AA6 /* SignUpVC.swift */,
+				3664767B2634117800767AA6 /* SignInVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		36647686263419C200767AA6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				36647683263419BE00767AA6 /* AuthState.swift */,
+				36647687263419E000767AA6 /* SignInWithAppleManager.swift */,
+				3664768B26341A6000767AA6 /* AppleIDAuthButton.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		369CEF3A26304A5D009A6A17 /* Onboarding */ = {
@@ -313,13 +353,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366476792634116B00767AA6 /* SignUpVC.swift in Sources */,
+				366476812634161300767AA6 /* TDCTextField.swift in Sources */,
 				36DA43B2262F2744009BA260 /* OnboardingVC.swift in Sources */,
+				3664767C2634117800767AA6 /* SignInVC.swift in Sources */,
+				36647684263419BE00767AA6 /* AuthState.swift in Sources */,
 				369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */,
 				3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */,
 				36B7DAA5263040B2007F8487 /* Manager.swift in Sources */,
+				36647688263419E000767AA6 /* SignInWithAppleManager.swift in Sources */,
 				36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */,
+				3664769226341CBE00767AA6 /* DropShadow.swift in Sources */,
 				36DA43AE262F2744009BA260 /* AppDelegate.swift in Sources */,
 				36DA43B0262F2744009BA260 /* SceneDelegate.swift in Sources */,
+				3664768F26341AD200767AA6 /* UserDefaults.swift in Sources */,
+				3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
