@@ -16,6 +16,18 @@ class OnboardingVC: UIViewController {
     @IBOutlet weak var collectionView: GeminiCollectionView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var pageControll: UIPageControl!
+    @IBOutlet weak var getStartedBttn: UIButton!
+    
+    //MARK:- IBAction
+    @IBAction func getStartedDidTap(_ sender: Any) {
+        
+        animateButton(TDCBttn: self.getStartedBttn)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+            let vc = self.storyboard?.instantiateViewController(identifier: "SignUpVC") as! SignUpVC
+            self.present(vc, animated: true, completion: nil)
+            lightImpactHeptic()
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +47,7 @@ class OnboardingVC: UIViewController {
     func configure() {
         titleLabel.attributedText = NSMutableAttributedString()
             .regular20("Welcome to\n")
-            .extraBold40("Bucket List")
+            .extraBold40Green("BUCKET")
         descriptionLabel.attributedText = NSMutableAttributedString()
             .regular14("This ")
             .bold14("shit")
@@ -129,7 +141,4 @@ extension OnboardingVC: UICollectionViewDelegate, UICollectionViewDataSource {
             self.collectionView.animateCell(cell)
         }
     }
-    
-    
-    
 }

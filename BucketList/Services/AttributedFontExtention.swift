@@ -56,6 +56,17 @@ extension NSMutableAttributedString {
         return self
     }
     
+    func extraBold40Green(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : extraBold40Font,
+            .foregroundColor : UIColor(named: "greenAppColor") as Any,
+        ]
+        
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
+    }
+    
 }
 
 extension Date {

@@ -22,6 +22,10 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var appleButtonView: UIView!
     
     
+    @IBAction func signInBttnDidTap(_ sender: Any) {
+        lightImpactHeptic()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -123,6 +127,8 @@ extension SignUpVC {
         ])
         
         self.isModalInPresentation = true
+        
+        setUpKeyboardNotifications()
     }
     
     @objc
@@ -140,4 +146,19 @@ extension SignUpVC {
         print("Tapped")
     }
     
+}
+
+//MARK:- ⌨️ keyboard notifications
+extension SignUpVC {
+    
+    func setUpKeyboardNotifications(){
+        
+        let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(SwipehideKeyboard))
+        view.addGestureRecognizer(dismissKeyboard)
+        
+    }
+    
+    @objc func SwipehideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }

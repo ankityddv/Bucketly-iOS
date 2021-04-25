@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		149275FFA4C9D40549C80393 /* Pods_BucketList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91CC5EBF2DDF5D46642263A /* Pods_BucketList.framework */; };
+		3604307926354C0900603C5F /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3604307826354C0900603C5F /* CheatSheet.swift */; };
 		366476792634116B00767AA6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476782634116B00767AA6 /* SignUpVC.swift */; };
 		3664767C2634117800767AA6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664767B2634117800767AA6 /* SignInVC.swift */; };
 		366476812634161300767AA6 /* TDCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476802634161300767AA6 /* TDCTextField.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		2FEE38403D55CE9CE20F8FE0 /* Pods-BucketList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.release.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.release.xcconfig"; sourceTree = "<group>"; };
 		30D412906C0CA7497C3A1CD5 /* Pods-BucketList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.debug.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.debug.xcconfig"; sourceTree = "<group>"; };
+		3604307826354C0900603C5F /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
 		366476782634116B00767AA6 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		3664767B2634117800767AA6 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		366476802634161300767AA6 /* TDCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCTextField.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				36B7DA8C26304014007F8487 /* Fonts */,
 				3685A37F2630429C00D48167 /* AttributedFontExtention.swift */,
 				3664769126341CBE00767AA6 /* DropShadow.swift */,
+				3604307826354C0900603C5F /* CheatSheet.swift */,
 				36B7DAA4263040B2007F8487 /* Manager.swift */,
 				3664768E26341AD200767AA6 /* UserDefaults.swift */,
 				366476802634161300767AA6 /* TDCTextField.swift */,
@@ -362,6 +365,7 @@
 				3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */,
 				36B7DAA5263040B2007F8487 /* Manager.swift in Sources */,
 				36647688263419E000767AA6 /* SignInWithAppleManager.swift in Sources */,
+				3604307926354C0900603C5F /* CheatSheet.swift in Sources */,
 				36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */,
 				3664769226341CBE00767AA6 /* DropShadow.swift in Sources */,
 				36DA43AE262F2744009BA260 /* AppDelegate.swift in Sources */,
