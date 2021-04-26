@@ -57,7 +57,7 @@ class TDCtextField: UITextField {
             
             let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 20, height: 20))
             imageView.image = image
-            imageView.tintColor = tintColor
+            imageView.tintColor = UIColor(named: "grayTextColor")
             
             var width = leftPadding + 20
             
@@ -73,6 +73,6 @@ class TDCtextField: UITextField {
             leftViewMode = .never
         }
         
-        attributedPlaceholder = NSAttributedString(string: placeholder != nil ? placeholder! : "", attributes: [NSAttributedString.Key.foregroundColor:tintColor!])
+        attributedPlaceholder = NSAttributedString(string: placeholder != nil ? placeholder! : "", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "grayTextColor")!])
     }
 }

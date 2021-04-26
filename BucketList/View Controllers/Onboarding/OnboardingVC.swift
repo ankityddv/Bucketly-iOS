@@ -21,11 +21,11 @@ class OnboardingVC: UIViewController {
     //MARK:- IBAction
     @IBAction func getStartedDidTap(_ sender: Any) {
         
+        lightImpactHeptic()
         animateButton(TDCBttn: self.getStartedBttn)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
             let vc = self.storyboard?.instantiateViewController(identifier: "SignUpVC") as! SignUpVC
             self.present(vc, animated: true, completion: nil)
-            lightImpactHeptic()
         })
     }
     
