@@ -13,14 +13,29 @@ class GetUserInfoVC: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    
-    @objc
-    func didTapCameraButton(_ sender: Any) {
-        print("Open gallery")
-        let pickerController = UIImagePickerController()
-        pickerController.allowsEditing = true
-        pickerController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
-        present(pickerController, animated: true, completion: nil)
+    @IBAction func upadateBttnDidTap(_ sender: Any) {
+        Banner.shared.present(configurationHandler: { banner in
+            banner.tintColor = UIColor(named: "greenAppColor")
+            banner.title = "SUCCESS"
+            banner.subtitle = """
+            Updated your profile successfully 🥳
+            Go ahead and create a work space
+            """
+            if #available(iOS 13.0, *) {
+//                banner.icon = UIImage(systemName: "heart.fill")
+            }
+        }, dismissAfter: 1.5, in: view.window, feedbackStyle: .medium, pressHandler: {
+//            self.newColor = ([
+//                .red, .yellow, .blue, .green, .purple, .orange
+//            ] as [UIColor]).randomElement()
+            if #available(iOS 13.0, *) {
+                self.view.window?.overrideUserInterfaceStyle = .dark
+            } else {
+                // Fallback on earlier versions
+            }
+        }, completionHandler: {
+//            (sender as AnyObject).setTitle("Present again", for: .normal)
+        })
     }
     
     override func viewDidLoad() {
@@ -33,7 +48,15 @@ class GetUserInfoVC: UIViewController {
         profileImage.addGestureRecognizer(openPhotos)
         profileImage.isUserInteractionEnabled = true
     }
-
+    @objc
+    func didTapCameraButton(_ sender: Any) {
+//        print("Open gallery")
+        let pickerController = UIImagePickerController()
+        pickerController.allowsEditing = true
+        pickerController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+        present(pickerController, animated: true, completion: nil)
+    }
+    
 }
 
 // Image picker Extension

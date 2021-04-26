@@ -33,6 +33,10 @@
 		36B7DAA226304043007F8487 /* PlusJakartaSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA9C26304043007F8487 /* PlusJakartaSans-LightItalic.ttf */; };
 		36B7DAA5263040B2007F8487 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7DAA4263040B2007F8487 /* Manager.swift */; };
 		36D412E226368305003758FD /* GetUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D412E126368305003758FD /* GetUserInfoVC.swift */; };
+		36D412E726368ABC003758FD /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D412E626368ABC003758FD /* Banner.swift */; };
+		36D412EA26368ADC003758FD /* BannerQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D412E926368ADC003758FD /* BannerQueue.swift */; };
+		36D412ED26368AF9003758FD /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D412EC26368AF9003758FD /* BannerView.swift */; };
+		36D412F026369137003758FD /* BannerPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D412EF26369137003758FD /* BannerPresets.swift */; };
 		36DA43AE262F2744009BA260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA43AD262F2744009BA260 /* AppDelegate.swift */; };
 		36DA43B0262F2744009BA260 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA43AF262F2744009BA260 /* SceneDelegate.swift */; };
 		36DA43B2262F2744009BA260 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA43B1262F2744009BA260 /* OnboardingVC.swift */; };
@@ -70,6 +74,10 @@
 		36B7DA9C26304043007F8487 /* PlusJakartaSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		36B7DAA4263040B2007F8487 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		36D412E126368305003758FD /* GetUserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfoVC.swift; sourceTree = "<group>"; };
+		36D412E626368ABC003758FD /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		36D412E926368ADC003758FD /* BannerQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerQueue.swift; sourceTree = "<group>"; };
+		36D412EC26368AF9003758FD /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		36D412EF26369137003758FD /* BannerPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerPresets.swift; sourceTree = "<group>"; };
 		36DA43AA262F2744009BA260 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DA43AD262F2744009BA260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36DA43AF262F2744009BA260 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 			children = (
 				36B7DA8C26304014007F8487 /* Fonts */,
 				3685A37F2630429C00D48167 /* AttributedFontExtention.swift */,
+				36D412E526368AB0003758FD /* Banner */,
 				3664769126341CBE00767AA6 /* DropShadow.swift */,
 				3604307826354C0900603C5F /* CheatSheet.swift */,
 				36B7DAA4263040B2007F8487 /* Manager.swift */,
@@ -185,6 +194,17 @@
 				36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		36D412E526368AB0003758FD /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				36D412E626368ABC003758FD /* Banner.swift */,
+				36D412EF26369137003758FD /* BannerPresets.swift */,
+				36D412E926368ADC003758FD /* BannerQueue.swift */,
+				36D412EC26368AF9003758FD /* BannerView.swift */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		36DA43A1262F2744009BA260 = {
@@ -359,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D412ED26368AF9003758FD /* BannerView.swift in Sources */,
 				366476792634116B00767AA6 /* SignUpVC.swift in Sources */,
 				366476812634161300767AA6 /* TDCTextField.swift in Sources */,
 				36DA43B2262F2744009BA260 /* OnboardingVC.swift in Sources */,
@@ -368,14 +389,17 @@
 				3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */,
 				36B7DAA5263040B2007F8487 /* Manager.swift in Sources */,
 				36647688263419E000767AA6 /* SignInWithAppleManager.swift in Sources */,
+				36D412EA26368ADC003758FD /* BannerQueue.swift in Sources */,
 				3604307926354C0900603C5F /* CheatSheet.swift in Sources */,
 				36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */,
+				36D412E726368ABC003758FD /* Banner.swift in Sources */,
 				3664769226341CBE00767AA6 /* DropShadow.swift in Sources */,
 				36DA43AE262F2744009BA260 /* AppDelegate.swift in Sources */,
 				36DA43B0262F2744009BA260 /* SceneDelegate.swift in Sources */,
 				36D412E226368305003758FD /* GetUserInfoVC.swift in Sources */,
 				3664768F26341AD200767AA6 /* UserDefaults.swift in Sources */,
 				3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */,
+				36D412F026369137003758FD /* BannerPresets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

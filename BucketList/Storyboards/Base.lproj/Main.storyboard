@@ -481,6 +481,7 @@ Get your ass here</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getStartedDidTap:" destination="AgA-OG-umU" eventType="touchUpInside" id="iHI-nk-Vnk"/>
+                                            <action selector="upadateBttnDidTap:" destination="TZt-5d-Gyv" eventType="touchUpInside" id="ZQC-K5-jHK"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user_Mock" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-dn-uvV">
@@ -497,7 +498,7 @@ Get your ass here</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0hG-ey-4Fe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="rg6-nJ-PVd"/>
                     <connections>
@@ -511,22 +512,22 @@ Get your ass here</string>
     </scenes>
     <designables>
         <designable name="96e-m7-Ka8">
-            <size key="intrinsicContentSize" width="39.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="37" height="19"/>
         </designable>
         <designable name="BLU-e3-3vA">
-            <size key="intrinsicContentSize" width="72" height="19"/>
+            <size key="intrinsicContentSize" width="66.5" height="18"/>
         </designable>
         <designable name="L4a-Co-T0z">
-            <size key="intrinsicContentSize" width="74" height="20.5"/>
+            <size key="intrinsicContentSize" width="69" height="19"/>
         </designable>
         <designable name="SUq-KP-vic">
-            <size key="intrinsicContentSize" width="39.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="37" height="19"/>
         </designable>
         <designable name="cdY-Yz-2c3">
-            <size key="intrinsicContentSize" width="72" height="19"/>
+            <size key="intrinsicContentSize" width="66.5" height="18"/>
         </designable>
         <designable name="toF-nL-1If">
-            <size key="intrinsicContentSize" width="71" height="20.5"/>
+            <size key="intrinsicContentSize" width="68" height="19"/>
         </designable>
     </designables>
     <resources>
@@ -548,9 +549,6 @@ Get your ass here</string>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

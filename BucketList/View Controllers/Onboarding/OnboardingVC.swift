@@ -56,6 +56,10 @@ class OnboardingVC: UIViewController {
         // pageControl
         pageControll.hidesForSinglePage = true
         self.pageControll.numberOfPages = 3//procedures.count
+        
+        UIApplication.shared.windows.forEach { window in
+            window.overrideUserInterfaceStyle = .dark
+        }
     }
 
 
