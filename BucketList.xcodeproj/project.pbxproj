@@ -17,6 +17,9 @@
 		3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664768B26341A6000767AA6 /* AppleIDAuthButton.swift */; };
 		3664768F26341AD200767AA6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664768E26341AD200767AA6 /* UserDefaults.swift */; };
 		3664769226341CBE00767AA6 /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664769126341CBE00767AA6 /* DropShadow.swift */; };
+		367EF54626384A28005215AE /* BannerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54526384A28005215AE /* BannerState.swift */; };
+		367EF54926385684005215AE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54826385684005215AE /* Colors.swift */; };
+		367EF54D2638601B005215AE /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54C2638601B005215AE /* Spinner.swift */; };
 		3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685A37F2630429C00D48167 /* AttributedFontExtention.swift */; };
 		369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */; };
 		36B7DA8A26304004007F8487 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */; };
@@ -58,6 +61,9 @@
 		3664768B26341A6000767AA6 /* AppleIDAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIDAuthButton.swift; sourceTree = "<group>"; };
 		3664768E26341AD200767AA6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		3664769126341CBE00767AA6 /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		367EF54526384A28005215AE /* BannerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerState.swift; sourceTree = "<group>"; };
+		367EF54826385684005215AE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		367EF54C2638601B005215AE /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		3685A37F2630429C00D48167 /* AttributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedFontExtention.swift; sourceTree = "<group>"; };
 		369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringCVCell.swift; sourceTree = "<group>"; };
 		36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 				36B7DA8C26304014007F8487 /* Fonts */,
 				3685A37F2630429C00D48167 /* AttributedFontExtention.swift */,
 				36D412E526368AB0003758FD /* Banner */,
+				367EF54826385684005215AE /* Colors.swift */,
+				367EF54C2638601B005215AE /* Spinner.swift */,
 				3664769126341CBE00767AA6 /* DropShadow.swift */,
 				3604307826354C0900603C5F /* CheatSheet.swift */,
 				36B7DAA4263040B2007F8487 /* Manager.swift */,
@@ -200,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				36D412E626368ABC003758FD /* Banner.swift */,
+				367EF54526384A28005215AE /* BannerState.swift */,
 				36D412EF26369137003758FD /* BannerPresets.swift */,
 				36D412E926368ADC003758FD /* BannerQueue.swift */,
 				36D412EC26368AF9003758FD /* BannerView.swift */,
@@ -386,18 +395,21 @@
 				3664767C2634117800767AA6 /* SignInVC.swift in Sources */,
 				36647684263419BE00767AA6 /* AuthState.swift in Sources */,
 				369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */,
+				367EF54D2638601B005215AE /* Spinner.swift in Sources */,
 				3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */,
 				36B7DAA5263040B2007F8487 /* Manager.swift in Sources */,
 				36647688263419E000767AA6 /* SignInWithAppleManager.swift in Sources */,
 				36D412EA26368ADC003758FD /* BannerQueue.swift in Sources */,
 				3604307926354C0900603C5F /* CheatSheet.swift in Sources */,
 				36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */,
+				367EF54926385684005215AE /* Colors.swift in Sources */,
 				36D412E726368ABC003758FD /* Banner.swift in Sources */,
 				3664769226341CBE00767AA6 /* DropShadow.swift in Sources */,
 				36DA43AE262F2744009BA260 /* AppDelegate.swift in Sources */,
 				36DA43B0262F2744009BA260 /* SceneDelegate.swift in Sources */,
 				36D412E226368305003758FD /* GetUserInfoVC.swift in Sources */,
 				3664768F26341AD200767AA6 /* UserDefaults.swift in Sources */,
+				367EF54626384A28005215AE /* BannerState.swift in Sources */,
 				3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */,
 				36D412F026369137003758FD /* BannerPresets.swift in Sources */,
 			);

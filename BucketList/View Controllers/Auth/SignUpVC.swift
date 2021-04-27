@@ -20,8 +20,14 @@ class SignUpVC: UIViewController {
     
     //MARK:- @IBOutlet
     @IBOutlet weak var appleButtonView: UIView!
+    @IBOutlet weak var usernameTextField: TDCtextField!
+    @IBOutlet weak var emailTextField: TDCtextField!
+    @IBOutlet weak var passwordTextField: TDCtextField!
+    @IBOutlet weak var signUpBttn: UIButton!
     
-    
+    //MARK:- @IBAction
+    @IBAction func signUpBttnDidTap(_ sender: Any) {
+    }
     @IBAction func signInBttnDidTap(_ sender: Any) {
         lightImpactHeptic()
     }
@@ -99,7 +105,6 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     
     
 }
-
 extension SignUpVC: ASAuthorizationControllerPresentationContextProviding {
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -128,6 +133,7 @@ extension SignUpVC {
         
         self.isModalInPresentation = true
         
+        usernameTextField.delegate = self
         setUpKeyboardNotifications()
     }
     
@@ -143,7 +149,7 @@ extension SignUpVC {
         controller.presentationContextProvider = self
         
         controller.performRequests()
-        print("Tapped")
+//        print("Tapped")
     }
     
 }
@@ -153,12 +159,39 @@ extension SignUpVC {
     
     func setUpKeyboardNotifications(){
         
-        let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(SwipehideKeyboard))
+        let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(swipeHideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)
         
     }
     
-    @objc func SwipehideKeyboard() {
+    @objc func swipeHideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+}
+
+//MARK:- 🔐 Textfield delegate
+extension SignUpVC: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == usernameTextField {
+            textField.layer.borderWidth = 2
+            textField.backgroundColor = getColor(color: .black)
+            textField.layer.borderColor = getColor(color: .appColor).cgColor
+        } else if textField == emailTextField {
+            textField.layer.borderWidth = 2
+            textField.backgroundColor = getColor(color: .black)
+            textField.layer.borderColor = getColor(color: .appColor).cgColor
+        } else if textField == passwordTextField {
+            textField.layer.borderWidth = 2
+            textField.backgroundColor = getColor(color: .black)
+            textField.layer.borderColor = getColor(color: .appColor).cgColor
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 0
+        textField.backgroundColor = getColor(color: .textFieldBg)
+        textField.layer.borderColor = getColor(color: .clear).cgColor
+    }
+    
 }

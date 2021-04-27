@@ -171,6 +171,9 @@ Get your ass here</string>
                                                 <imageReference key="value" image="person" catalog="system" symbolScale="small" renderingMode="template"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y8O-gp-Bwu" id="Jlz-7A-rLO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96e-m7-Ka8" customClass="TDCtextField" customModule="BucketList" customModuleProvider="target">
                                         <rect key="frame" x="20" y="213" width="354" height="60"/>
@@ -188,6 +191,9 @@ Get your ass here</string>
                                                 <imageReference key="value" image="mail" catalog="system" symbolScale="small" renderingMode="template"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y8O-gp-Bwu" id="8mf-Lh-UNE"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BLU-e3-3vA" customClass="TDCtextField" customModule="BucketList" customModuleProvider="target">
                                         <rect key="frame" x="20" y="297" width="354" height="60"/>
@@ -205,6 +211,9 @@ Get your ass here</string>
                                                 <imageReference key="value" image="lock" catalog="system" renderingMode="template"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y8O-gp-Bwu" id="0pR-XR-Ond"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ik7-lA-hRy">
                                         <rect key="frame" x="191" y="461" width="15" height="18"/>
@@ -238,6 +247,7 @@ Get your ass here</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getStartedDidTap:" destination="AgA-OG-umU" eventType="touchUpInside" id="ldp-Il-Qzz"/>
+                                            <action selector="signUpBttnDidTap:" destination="Y8O-gp-Bwu" eventType="touchUpInside" id="fUJ-jE-cx9"/>
                                             <segue destination="TZt-5d-Gyv" kind="show" id="4DL-6P-gul"/>
                                         </connections>
                                     </button>
@@ -277,6 +287,10 @@ Get your ass here</string>
                     <navigationItem key="navigationItem" id="1fr-eX-zDW"/>
                     <connections>
                         <outlet property="appleButtonView" destination="WdN-LR-2NQ" id="wwr-y9-dFX"/>
+                        <outlet property="emailTextField" destination="96e-m7-Ka8" id="OaQ-es-Ram"/>
+                        <outlet property="passwordTextField" destination="BLU-e3-3vA" id="ISL-rm-Xqa"/>
+                        <outlet property="signUpBttn" destination="DKz-d1-4SC" id="IoU-2c-DAu"/>
+                        <outlet property="usernameTextField" destination="L4a-Co-T0z" id="3Fx-Ht-osm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYd-rR-o93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,6 +339,9 @@ Get your ass here</string>
                                                 <imageReference key="value" image="mail" catalog="system" symbolScale="small" renderingMode="template"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vU1-hD-SRg" id="bxL-XW-PB3"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-Yz-2c3" customClass="TDCtextField" customModule="BucketList" customModuleProvider="target">
                                         <rect key="frame" x="20" y="213" width="354" height="60"/>
@@ -342,6 +359,9 @@ Get your ass here</string>
                                                 <imageReference key="value" image="lock" catalog="system" renderingMode="template"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vU1-hD-SRg" id="1tD-RM-lOR"/>
+                                        </connections>
                                     </textField>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0D-dD-TP4">
                                         <rect key="frame" x="191" y="422" width="15" height="18"/>
@@ -367,6 +387,9 @@ Get your ass here</string>
                                         <state key="normal" title="Forgot Password?">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordDidTap:" destination="vU1-hD-SRg" eventType="touchUpInside" id="yR4-px-JxH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-wA-whu">
                                         <rect key="frame" x="20" y="342" width="354" height="60"/>
@@ -383,6 +406,7 @@ Get your ass here</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getStartedDidTap:" destination="AgA-OG-umU" eventType="touchUpInside" id="2bl-DW-7TB"/>
+                                            <action selector="signInBttnDidTap:" destination="vU1-hD-SRg" eventType="touchUpInside" id="BG7-Bp-n3W"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -418,6 +442,12 @@ Get your ass here</string>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="BaQ-zj-gzc"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="SUq-KP-vic" id="rVc-Mt-KR8"/>
+                        <outlet property="forgotPassword" destination="55Z-mx-agt" id="rYm-uA-i9e"/>
+                        <outlet property="passwordTextField" destination="cdY-Yz-2c3" id="xQy-qb-J0q"/>
+                        <outlet property="signInBttn" destination="xOR-wA-whu" id="tbi-u0-dNa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAo-TP-oWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,7 +462,7 @@ Get your ass here</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5k-XQ-XXJ">
-                                <rect key="frame" x="8" y="57" width="398" height="631"/>
+                                <rect key="frame" x="8" y="57" width="398" height="534"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TELL US MORE 🤨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhM-xy-GEG">
@@ -465,6 +495,9 @@ Get your ass here</string>
                                                 <imageReference key="value" image="person" catalog="system" symbolScale="small" renderingMode="template"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="TZt-5d-Gyv" id="5gb-l3-1CT"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O93-Jr-rGx">
                                         <rect key="frame" x="20" y="407" width="354" height="60"/>
@@ -502,7 +535,10 @@ Get your ass here</string>
                     </view>
                     <navigationItem key="navigationItem" id="rg6-nJ-PVd"/>
                     <connections>
+                        <outlet property="containerView" destination="Y5k-XQ-XXJ" id="bzw-Uz-k7P"/>
+                        <outlet property="fullNameTextField" destination="toF-nL-1If" id="C5Z-Ba-T55"/>
                         <outlet property="profileImage" destination="cwp-dn-uvV" id="9kK-XY-1Dx"/>
+                        <outlet property="updateBttn" destination="O93-Jr-rGx" id="bvf-jy-KGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InS-A5-fLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -512,22 +548,22 @@ Get your ass here</string>
     </scenes>
     <designables>
         <designable name="96e-m7-Ka8">
-            <size key="intrinsicContentSize" width="37" height="19"/>
+            <size key="intrinsicContentSize" width="39.5" height="20.5"/>
         </designable>
         <designable name="BLU-e3-3vA">
-            <size key="intrinsicContentSize" width="66.5" height="18"/>
+            <size key="intrinsicContentSize" width="72" height="19"/>
         </designable>
         <designable name="L4a-Co-T0z">
-            <size key="intrinsicContentSize" width="69" height="19"/>
+            <size key="intrinsicContentSize" width="74" height="20.5"/>
         </designable>
         <designable name="SUq-KP-vic">
-            <size key="intrinsicContentSize" width="37" height="19"/>
+            <size key="intrinsicContentSize" width="39.5" height="20.5"/>
         </designable>
         <designable name="cdY-Yz-2c3">
-            <size key="intrinsicContentSize" width="66.5" height="18"/>
+            <size key="intrinsicContentSize" width="72" height="19"/>
         </designable>
         <designable name="toF-nL-1If">
-            <size key="intrinsicContentSize" width="68" height="19"/>
+            <size key="intrinsicContentSize" width="71" height="20.5"/>
         </designable>
     </designables>
     <resources>
