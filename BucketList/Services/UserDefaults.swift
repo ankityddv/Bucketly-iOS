@@ -8,4 +8,4 @@
 import UIKit
 import Foundation
 
-let userDefaults = UserDefaults(suiteName: "group.tdc.Bucket")
+let userDefaults = UserDefaults(suiteName: "group.tdc.Bucketly")

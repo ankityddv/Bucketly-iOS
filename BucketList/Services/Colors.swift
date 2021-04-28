@@ -8,18 +8,19 @@
 import UIKit
 
 enum ColorSet {
-    case appColor
+    case neonGreen
     case textFieldBg
     case gray
     case buttonBg
     case black
     case clear
     case white
+    case neonPink
 }
 
 func getColor(color: ColorSet) -> UIColor{
     switch color {
-    case .appColor:
+    case .neonGreen:
         return UIColor(named: "greenAppColor")!
     case .textFieldBg:
         return UIColor(named: "textFieldBgColor")!
@@ -33,5 +34,7 @@ func getColor(color: ColorSet) -> UIColor{
         return UIColor.clear
     case .white:
         return UIColor.white
+    case .neonPink:
+        return UIColor(named: "neonPinkColor")!
     }
 }

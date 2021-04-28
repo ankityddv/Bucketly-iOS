@@ -46,6 +46,17 @@ extension NSMutableAttributedString {
         return self
     }
     
+    func bold14White(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : bold14Font,
+            .foregroundColor : getColor(color: .white) as Any,
+        ]
+        
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
+    }
+    
     func extraBold40(_ value:String) -> NSMutableAttributedString {
         
         let attributes:[NSAttributedString.Key : Any] = [

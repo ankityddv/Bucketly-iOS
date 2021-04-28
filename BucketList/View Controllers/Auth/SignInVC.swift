@@ -19,6 +19,9 @@ class SignInVC: UIViewController {
     
     //MARK:- @IBAction
     @IBAction func forgotPasswordDidTap(_ sender: Any) {
+        lightImpactHeptic()
+        let vc = self.storyboard?.instantiateViewController(identifier: "ResetPasswordVC") as! ResetPasswordVC
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func signInBttnDidTap(_ sender: Any) {
     }
@@ -29,6 +32,7 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInBttn.hero.id = "bttn"
         self.hero.isEnabled = true
         setUpKeyboardNotifications()
     }
@@ -56,11 +60,11 @@ extension SignInVC: UITextFieldDelegate {
         if textField == emailTextField {
             textField.layer.borderWidth = 2
             textField.backgroundColor = getColor(color: .black)
-            textField.layer.borderColor = getColor(color: .appColor).cgColor
+            textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         } else if textField == passwordTextField {
             textField.layer.borderWidth = 2
             textField.backgroundColor = getColor(color: .black)
-            textField.layer.borderColor = getColor(color: .appColor).cgColor
+            textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         }
     }
     

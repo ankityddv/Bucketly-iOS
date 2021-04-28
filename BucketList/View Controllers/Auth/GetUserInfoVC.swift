@@ -109,7 +109,7 @@ extension GetUserInfoVC: UITextFieldDelegate {
         if textField == fullNameTextField {
             textField.layer.borderWidth = 2
             textField.backgroundColor = getColor(color: .black)
-            textField.layer.borderColor = getColor(color: .appColor).cgColor
+            textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {

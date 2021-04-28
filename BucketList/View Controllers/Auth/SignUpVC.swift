@@ -36,7 +36,6 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         configure()
     }
-    
 }
 
 //MARK:- 🔐 Handle Sign In
@@ -133,7 +132,7 @@ extension SignUpVC {
         
         self.isModalInPresentation = true
         
-        usernameTextField.delegate = self
+        signUpBttn.hero.id = "bttn"
         setUpKeyboardNotifications()
     }
     
@@ -176,15 +175,15 @@ extension SignUpVC: UITextFieldDelegate {
         if textField == usernameTextField {
             textField.layer.borderWidth = 2
             textField.backgroundColor = getColor(color: .black)
-            textField.layer.borderColor = getColor(color: .appColor).cgColor
+            textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         } else if textField == emailTextField {
             textField.layer.borderWidth = 2
             textField.backgroundColor = getColor(color: .black)
-            textField.layer.borderColor = getColor(color: .appColor).cgColor
+            textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         } else if textField == passwordTextField {
             textField.layer.borderWidth = 2
             textField.backgroundColor = getColor(color: .black)
-            textField.layer.borderColor = getColor(color: .appColor).cgColor
+            textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         }
     }
     

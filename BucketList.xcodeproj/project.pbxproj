@@ -21,6 +21,7 @@
 		367EF54926385684005215AE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54826385684005215AE /* Colors.swift */; };
 		367EF54D2638601B005215AE /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54C2638601B005215AE /* Spinner.swift */; };
 		3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685A37F2630429C00D48167 /* AttributedFontExtention.swift */; };
+		368A28E1263982CD0001A130 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A28E0263982CD0001A130 /* ResetPasswordVC.swift */; };
 		369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */; };
 		36B7DA8A26304004007F8487 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */; };
 		36B7DA9226304037007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8D26304035007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
@@ -65,6 +66,7 @@
 		367EF54826385684005215AE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		367EF54C2638601B005215AE /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		3685A37F2630429C00D48167 /* AttributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedFontExtention.swift; sourceTree = "<group>"; };
+		368A28E0263982CD0001A130 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringCVCell.swift; sourceTree = "<group>"; };
 		36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		36B7DA8D26304035007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		36D412E926368ADC003758FD /* BannerQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerQueue.swift; sourceTree = "<group>"; };
 		36D412EC26368AF9003758FD /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		36D412EF26369137003758FD /* BannerPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerPresets.swift; sourceTree = "<group>"; };
-		36DA43AA262F2744009BA260 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36DA43AA262F2744009BA260 /* Bucketly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bucketly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DA43AD262F2744009BA260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36DA43AF262F2744009BA260 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36DA43B1262F2744009BA260 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				366476782634116B00767AA6 /* SignUpVC.swift */,
 				3664767B2634117800767AA6 /* SignInVC.swift */,
 				36D412E126368305003758FD /* GetUserInfoVC.swift */,
+				368A28E0263982CD0001A130 /* ResetPasswordVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -229,7 +232,7 @@
 		36DA43AB262F2744009BA260 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36DA43AA262F2744009BA260 /* BucketList.app */,
+				36DA43AA262F2744009BA260 /* Bucketly.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,9 +268,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36DA43A9262F2744009BA260 /* BucketList */ = {
+		36DA43A9262F2744009BA260 /* Bucketly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36DA43C1262F2746009BA260 /* Build configuration list for PBXNativeTarget "BucketList" */;
+			buildConfigurationList = 36DA43C1262F2746009BA260 /* Build configuration list for PBXNativeTarget "Bucketly" */;
 			buildPhases = (
 				E32BDA08D909E6EE91FCAD17 /* [CP] Check Pods Manifest.lock */,
 				36DA43A6262F2744009BA260 /* Sources */,
@@ -279,9 +282,9 @@
 			);
 			dependencies = (
 			);
-			name = BucketList;
+			name = Bucketly;
 			productName = BucketList;
-			productReference = 36DA43AA262F2744009BA260 /* BucketList.app */;
+			productReference = 36DA43AA262F2744009BA260 /* Bucketly.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -311,7 +314,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36DA43A9262F2744009BA260 /* BucketList */,
+				36DA43A9262F2744009BA260 /* Bucketly */,
 			);
 		};
 /* End PBXProject section */
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D412ED26368AF9003758FD /* BannerView.swift in Sources */,
+				368A28E1263982CD0001A130 /* ResetPasswordVC.swift in Sources */,
 				366476792634116B00767AA6 /* SignUpVC.swift in Sources */,
 				366476812634161300767AA6 /* TDCTextField.swift in Sources */,
 				36DA43B2262F2744009BA260 /* OnboardingVC.swift in Sources */,
@@ -567,7 +571,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tdc.BucketList;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.Bucketly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,7 +593,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tdc.BucketList;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tdc.Bucketly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36DA43C1262F2746009BA260 /* Build configuration list for PBXNativeTarget "BucketList" */ = {
+		36DA43C1262F2746009BA260 /* Build configuration list for PBXNativeTarget "Bucketly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36DA43C2262F2746009BA260 /* Debug */,

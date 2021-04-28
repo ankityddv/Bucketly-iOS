@@ -1,10 +1,10 @@
 platform :ios, '14.0'
 
-target 'BucketList' do
+target 'Bucketly' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for BucketList
+  # Pods for Bucketly
 
     pod 'Hero'
     pod "Gemini"
