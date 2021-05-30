@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AgA-OG-umU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AgA-OG-umU">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -245,7 +245,6 @@ Get your ass here</string>
                                         <connections>
                                             <action selector="getStartedDidTap:" destination="AgA-OG-umU" eventType="touchUpInside" id="ldp-Il-Qzz"/>
                                             <action selector="signUpBttnDidTap:" destination="Y8O-gp-Bwu" eventType="touchUpInside" id="fUJ-jE-cx9"/>
-                                            <segue destination="TZt-5d-Gyv" kind="show" id="4DL-6P-gul"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -284,6 +283,8 @@ Get your ass here</string>
                     <navigationItem key="navigationItem" id="1fr-eX-zDW"/>
                     <connections>
                         <outlet property="appleButtonView" destination="WdN-LR-2NQ" id="wwr-y9-dFX"/>
+                        <outlet property="containerView" destination="XDX-y4-mH4" id="Pdy-JN-0ED"/>
+                        <outlet property="containerView2" destination="PT0-rE-ps4" id="fnr-l6-RHH"/>
                         <outlet property="emailTextField" destination="96e-m7-Ka8" id="OaQ-es-Ram"/>
                         <outlet property="passwordTextField" destination="BLU-e3-3vA" id="ISL-rm-Xqa"/>
                         <outlet property="signUpBttn" destination="DKz-d1-4SC" id="IoU-2c-DAu"/>
@@ -440,10 +441,13 @@ Get your ass here</string>
                     </view>
                     <navigationItem key="navigationItem" id="BaQ-zj-gzc"/>
                     <connections>
+                        <outlet property="containerView" destination="i7X-xS-eYJ" id="iqo-Lc-X1D"/>
+                        <outlet property="containerView2" destination="vtC-Cm-kIj" id="Jte-3d-24a"/>
                         <outlet property="emailTextField" destination="SUq-KP-vic" id="rVc-Mt-KR8"/>
                         <outlet property="forgotPassword" destination="55Z-mx-agt" id="rYm-uA-i9e"/>
                         <outlet property="passwordTextField" destination="cdY-Yz-2c3" id="xQy-qb-J0q"/>
                         <outlet property="signInBttn" destination="xOR-wA-whu" id="tbi-u0-dNa"/>
+                        <segue destination="th6-5J-11b" kind="show" identifier="signed in" id="abm-u5-EIF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAo-TP-oWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -536,6 +540,7 @@ Get your ass here</string>
                         <outlet property="fullNameTextField" destination="toF-nL-1If" id="C5Z-Ba-T55"/>
                         <outlet property="profileImage" destination="cwp-dn-uvV" id="9kK-XY-1Dx"/>
                         <outlet property="updateBttn" destination="O93-Jr-rGx" id="bvf-jy-KGp"/>
+                        <segue destination="th6-5J-11b" kind="show" identifier="signed up" id="h2M-so-VFB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InS-A5-fLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -713,6 +718,102 @@ Get your ass here</string>
             </objects>
             <point key="canvasLocation" x="2653.6231884057975" y="26.785714285714285"/>
         </scene>
+        <!--SETTINGS-->
+        <scene sceneID="Cce-Xv-GWz">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="fL8-VE-IFJ" customClass="SettingsViewController" customModule="Bucketly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l1e-pj-tVs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="703"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bM5-1E-8IF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SETTINGS" id="LkM-RM-VSU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8b-FN-HWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5199" y="402"/>
+        </scene>
+        <!--CARTSY-->
+        <scene sceneID="avQ-nx-Nei">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="rBs-bU-Qj0" customClass="CartViewController" customModule="Bucketly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tos-p5-yMF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="703"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qy5-Hj-tPa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CARTSY" id="H7w-CZ-Z7k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y68-ae-cG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5200" y="-277.23214285714283"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sx3-mw-21q">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="th6-5J-11b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jRq-cR-hOc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BlE-uM-V7j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lE3-Mu-ze5" kind="relationship" relationship="viewControllers" id="rX5-Bi-Wxy"/>
+                        <segue destination="tsI-iX-GUY" kind="relationship" relationship="viewControllers" id="oeI-9O-UJU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pp2-Nr-eGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3399" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cfe-V6-w7y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lE3-Mu-ze5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="cartsey-icon" id="fLn-e3-Kcj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Aq2-TZ-JES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="21"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rBs-bU-Qj0" kind="relationship" relationship="rootViewController" id="JLt-EZ-xDs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4IA-Du-6vs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4289.855072463768" y="-277.23214285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ut6-uH-x9p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tsI-iX-GUY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="settings-icon" id="HCg-tj-6bn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ccv-we-gL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="21"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fL8-VE-IFJ" kind="relationship" relationship="rootViewController" id="gCa-ax-bwQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59R-VL-8wS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4288" y="402"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="96e-m7-Ka8">
@@ -737,11 +838,16 @@ Get your ass here</string>
             <size key="intrinsicContentSize" width="71" height="20.5"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="h2M-so-VFB"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="cross" width="14" height="14"/>
+        <image name="cartsey-icon" width="27" height="27"/>
+        <image name="cross" width="28" height="28"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="mail" catalog="system" width="128" height="93"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="settings-icon" width="23" height="23"/>
         <image name="user_Mock" width="161" height="161"/>
         <namedColor name="buttonColor">
             <color red="0.66299998760223389" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -753,7 +859,7 @@ Get your ass here</string>
             <color red="0.66299998760223389" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="neonPinkColor">
-            <color red="1" green="0.0" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.0" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textFieldBgColor">
             <color red="0.078000001609325409" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

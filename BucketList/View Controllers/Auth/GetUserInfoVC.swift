@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class GetUserInfoVC: UIViewController {
 
     let spinner = SpinnerView()
     let spinnerLabel = UILabel()
     var selectedImage: UIImage?
+    var ref:DatabaseReference?
     
     //MARK:- @IBOutlet
     @IBOutlet weak var profileImage: UIImageView!
@@ -21,63 +23,30 @@ class GetUserInfoVC: UIViewController {
     
     //MARK:- @IBAction
     @IBAction func upadateBttnDidTap(_ sender: Any) {
-        
-        
         if self.fullNameTextField.text!.isEmpty {
-            /**
-             To display the top`banner`in the view.
-             */
-            Banner.shared.present(configurationHandler: { banner in
-                banner.tintColor = getBannerDetails(state: .warning).0
-                banner.title = getBannerDetails(state: .warning).1
-                banner.subtitle = """
-                Full name field is empty
-                Please enter your full name
-                """
-            }, dismissAfter: 1, in: self.view.window, feedbackStyle: .medium, pressHandler: {
-                self.view.window?.overrideUserInterfaceStyle = .dark
-            })
+            presentBanner("Full name field is empty \nPlease enter your full name", .warning)
         } else {
-            Banner.shared.present(configurationHandler: { banner in
-                banner.tintColor = getBannerDetails(state: .success).0
-                banner.title = getBannerDetails(state: .success).1
-                banner.subtitle = """
-                Updated your profile successfully 🥳
-                Go ahead and create a work space
-                """
-    //            banner.icon = UIImage(systemName: "heart.fill")
-            }, dismissAfter: 1, in: view.window, feedbackStyle: .medium, pressHandler: {
-                /*
-                self.newColor = ([
-                    .red, .yellow, .blue, .green, .purple, .orange
-                ] as [UIColor]).randomElement()
-                 */
-                self.view.window?.overrideUserInterfaceStyle = .dark
-            }, completionHandler: {
-                /**
-                 To `hide`the containerView and display `spinner` in the view
-                 */
-                self.swipeHideKeyboard()
+            let name = fullNameTextField.text!
+            if name.isEmpty == true {
+                presentBanner("Enter your name first", .success)
+            } else {
+                updateProfileImage()
                 
-                self.containerView.alpha = 1
-                UIView.transition(with: self.containerView, duration: 0.4,
-                                  options: .curveEaseInOut,
-                                  animations: {
-                                    self.containerView.alpha = 0
-                              })
-                self.spinnerLabel.attributedText = NSMutableAttributedString()
-                    .bold14("LOGGING YOU IN...")
-                self.spinnerLabel.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 150, height: 40)
-                self.spinnerLabel.center.x = self.view.center.x
-                self.spinnerLabel.center.y = self.view.center.y + 20
-                self.spinnerLabel.textAlignment = .center
+                let name = fullNameTextField.text!
+                let uid = Auth.auth().currentUser!.uid
+                let values = ["fullname": name]
                 
-                self.spinner.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 30, height: 30)
-                self.spinner.center = CGPoint(x: self.view.frame.size.width  / 2, y: (self.view.frame.size.height / 2)-20)
-                self.view.addSubview(self.spinnerLabel)
-                self.view.addSubview(self.spinner)
-                self.spinner.animate()
-            })
+                Database.database().reference().child("Users").child("\(uid)").updateChildValues(values) {
+                 (error:Error?, ref:DatabaseReference) in
+                    if let error = error {
+                        print("Data could not be saved: \(error).")
+                    } else {
+                        self.performSegue(withIdentifier: "signed up", sender: nil)
+                    }
+                }
+                startLoader()
+            }
+            presentBanner("Updated your profile successfully 🥳 \nGo ahead and create a work space", .success)
         }
     }
     
@@ -99,12 +68,67 @@ class GetUserInfoVC: UIViewController {
         pickerController.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
         present(pickerController, animated: true, completion: nil)
     }
-    
+    func startLoader() {
+        /**
+         To `hide`the containerView and display `spinner` in the view
+         */
+        self.swipeHideKeyboard()
+        
+        self.containerView.alpha = 1
+        UIView.transition(with: self.containerView, duration: 0.4,
+                          options: .curveEaseInOut,
+                          animations: {
+                            self.containerView.alpha = 0
+                      })
+        self.spinnerLabel.attributedText = NSMutableAttributedString()
+            .bold14("LOGGING YOU IN...")
+        self.spinnerLabel.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 150, height: 40)
+        self.spinnerLabel.center.x = self.view.center.x
+        self.spinnerLabel.center.y = self.view.center.y + 20
+        self.spinnerLabel.textAlignment = .center
+        
+        self.spinner.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 30, height: 30)
+        self.spinner.center = CGPoint(x: self.view.frame.size.width  / 2, y: (self.view.frame.size.height / 2)-20)
+        self.view.addSubview(self.spinnerLabel)
+        self.view.addSubview(self.spinner)
+        self.spinner.animate()
+    }
+    func updateProfileImage(){
+        let storageRef = Storage.storage().reference().child("user/profile")
+        let profileImg = self.selectedImage
+            
+        guard let imageData = profileImg?.jpegData(compressionQuality: 0.2) else { return }
+            
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+            
+        let ImageRef = storageRef.child("\(uid).png")
+        _ = ImageRef.putData(imageData, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                return
+            }
+            _ = metadata.size
+            ImageRef.downloadURL { (url, error) in
+                guard url != nil else {
+                    return
+                }
+            }
+        }
+    }
+    func presentBanner(_ subtitle: String,_ state: BannerState, _ void: (() -> Void)? = nil) {
+        Banner.shared.present(configurationHandler: { banner in
+            banner.tintColor = getBannerDetails(state: state).0
+            banner.title = getBannerDetails(state: state).1
+            banner.subtitle = """
+            \(subtitle)
+            """
+        }, dismissAfter: 1, in: self.view.window, feedbackStyle: .medium, pressHandler: {
+            self.view.window?.overrideUserInterfaceStyle = .dark
+        }, completionHandler: void)
+    }
 }
 
 //MARK:- 🔐 Textfield delegate
 extension GetUserInfoVC: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == fullNameTextField {
             textField.layer.borderWidth = 2
@@ -121,7 +145,6 @@ extension GetUserInfoVC: UITextFieldDelegate {
 
 // Image picker Extension
 extension GetUserInfoVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectedImage = image
@@ -135,12 +158,9 @@ extension GetUserInfoVC: UIImagePickerControllerDelegate,UINavigationControllerD
 
 //MARK:- ⌨️ keyboard notifications
 extension GetUserInfoVC {
-    
-    func setUpKeyboardNotifications(){
-        
+    func setUpKeyboardNotifications() {
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(swipeHideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)
-        
     }
     
     @objc func swipeHideKeyboard() {

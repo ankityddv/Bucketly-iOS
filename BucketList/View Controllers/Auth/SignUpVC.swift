@@ -7,16 +7,18 @@
 
 import Hero
 import UIKit
+import Firebase
 import AuthenticationServices
 
 protocol LoginViewControllerDelegate {
-    
     func didFinishAuth()
 }
 
 class SignUpVC: UIViewController {
 
     var delegate: LoginViewControllerDelegate?
+    let spinner = SpinnerView()
+    let spinnerLabel = UILabel()
     
     //MARK:- @IBOutlet
     @IBOutlet weak var appleButtonView: UIView!
@@ -24,12 +26,53 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var emailTextField: TDCtextField!
     @IBOutlet weak var passwordTextField: TDCtextField!
     @IBOutlet weak var signUpBttn: UIButton!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerView2: UIView!
     
     //MARK:- @IBAction
     @IBAction func signUpBttnDidTap(_ sender: Any) {
+        let username = usernameTextField.text
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        
+        if username?.isEmpty != true && email?.isEmpty != true && password?.isEmpty != true {
+            if password!.count < 6 && password!.count >= 1 {
+                // display error
+                self.presentBanner("Password must be greater than 6 characters!", .error)
+                errorHaptic()
+            } else {
+                // create new user
+                Auth.auth().createUser(withEmail: email!, password: password!){ [self] (user, error) in
+                    if error == nil {
+                        /// registered new user now `save` the info to database
+                        let uid = Auth.auth().currentUser!.uid
+                        let values = ["username": username!,"email": email!]
+                        
+                        Database.database().reference().child("Users").child("\(uid)").updateChildValues(values) {
+                         (error:Error?, ref:DatabaseReference) in
+                            if let error = error {
+                                self.presentBanner("\(error)", .error)
+                            } else {
+                                print("Data saved successfully!")
+                            }
+                        }
+                        let vc =  self.storyboard!.instantiateViewController(withIdentifier: "GetUserInfoVC") as! GetUserInfoVC
+                        self.present(vc, animated: true, completion: nil)
+                    }
+                    else {
+                        /// if any error occur during creating a user present banner
+                        self.presentBanner("Couldn't sign you in, please contact us!", .error)
+                        stopLoader()
+                    }
+                }
+            startLoader()
+            }
+        } else {
+            self.presentBanner("Couldn't sign you in, please contact us!", .error)
+        }
     }
     @IBAction func signInBttnDidTap(_ sender: Any) {
-        lightImpactHeptic()
+        lightImpactHaptic()
     }
     
     override func viewDidLoad() {
@@ -42,7 +85,7 @@ class SignUpVC: UIViewController {
 extension SignUpVC: ASAuthorizationControllerDelegate {
     
     private func registerNewAccount(credential: ASAuthorizationAppleIDCredential) {
-        print("Registering new account with user: \(credential.user)")
+//        print("Registering new account with user: \(credential.user)")
         delegate?.didFinishAuth()
 //        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
 //        appleButtonView.hero.id = HeroIDs.buttonKey
@@ -51,7 +94,7 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     }
     
     private func signInWithExistingAccount(credential: ASAuthorizationAppleIDCredential) {
-        print("Signing in with existing account with user: \(credential.user)")
+//        print("Signing in with existing account with user: \(credential.user)")
         delegate?.didFinishAuth()
 //        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
 //        appleButtonView.hero.id = HeroIDs.buttonKey
@@ -60,7 +103,7 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     }
     
     private func signInWithUserAndPassword(credential: ASAuthorizationAppleIDCredential) {
-        print("Signing in using an existing icloud Keychain credential with user:: \(credential.user)")
+//        print("Signing in using an existing icloud Keychain credential with user:: \(credential.user)")
         delegate?.didFinishAuth()
 //        let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifierManager.dashboardKey) as! DashboardVC
 //        appleButtonView.hero.id = HeroIDs.buttonKey
@@ -99,7 +142,7 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("Something bad happened")
+//        print("Something bad happened")
     }
     
     
@@ -114,7 +157,6 @@ extension SignUpVC: ASAuthorizationControllerPresentationContextProviding {
 
 //MARK:- 🤡 functions()
 extension SignUpVC {
-    
     func configure() {
         let appleButton = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
         appleButton.translatesAutoresizingMaskIntoConstraints = false
@@ -135,7 +177,6 @@ extension SignUpVC {
         signUpBttn.hero.id = "bttn"
         setUpKeyboardNotifications()
     }
-    
     @objc
     func didTapAppleButton() {
         let provider = ASAuthorizationAppleIDProvider()
@@ -148,21 +189,65 @@ extension SignUpVC {
         controller.presentationContextProvider = self
         
         controller.performRequests()
-//        print("Tapped")
     }
-    
+    func startLoader() {
+        self.containerView.alpha = 1
+        UIView.transition(with: self.containerView, duration: 0.4,
+                          options: .curveEaseInOut,
+                          animations: {
+                            self.containerView.alpha = 0
+                      })
+        self.containerView2.alpha = 1
+        UIView.transition(with: self.containerView2, duration: 0.4,
+                          options: .curveEaseInOut,
+                          animations: {
+                            self.containerView2.alpha = 0
+                      })
+        
+        self.spinnerLabel.attributedText = NSMutableAttributedString()
+            .bold14("LOGGING YOU IN...")
+        self.spinnerLabel.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 150, height: 40)
+        self.spinnerLabel.center.x = self.view.center.x
+        self.spinnerLabel.center.y = self.view.center.y + 20
+        self.spinnerLabel.textAlignment = .center
+        
+        self.spinner.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 30, height: 30)
+        self.spinner.center = CGPoint(x: self.view.frame.size.width  / 2, y: (self.view.frame.size.height / 2)-20)
+        self.view.addSubview(self.spinnerLabel)
+        self.view.addSubview(self.spinner)
+        self.spinner.animate()
+    }
+    func stopLoader() {
+        containerView.alpha = 0
+        containerView2.alpha = 0
+        UIView.transition(with: self.containerView, duration: 0.4,
+                          options: .curveEaseInOut,
+                          animations: {
+                            self.containerView.alpha = 1
+                            self.containerView2.alpha = 1
+                      })
+        self.spinner.removeFromSuperview()
+        self.spinnerLabel.removeFromSuperview()
+    }
+    func presentBanner(_ subtitle: String,_ state: BannerState, _ void: (() -> Void)? = nil) {
+        Banner.shared.present(configurationHandler: { banner in
+            banner.tintColor = getBannerDetails(state: state).0
+            banner.title = getBannerDetails(state: state).1
+            banner.subtitle = """
+            \(subtitle)
+            """
+        }, dismissAfter: 1, in: self.view.window, feedbackStyle: .medium, pressHandler: {
+            self.view.window?.overrideUserInterfaceStyle = .dark
+        }, completionHandler: void)
+    }
 }
 
 //MARK:- ⌨️ keyboard notifications
 extension SignUpVC {
-    
-    func setUpKeyboardNotifications(){
-        
+    func setUpKeyboardNotifications() {
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(swipeHideKeyboard))
         view.addGestureRecognizer(dismissKeyboard)
-        
     }
-    
     @objc func swipeHideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
@@ -170,7 +255,6 @@ extension SignUpVC {
 
 //MARK:- 🔐 Textfield delegate
 extension SignUpVC: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == usernameTextField {
             textField.layer.borderWidth = 2
@@ -186,11 +270,9 @@ extension SignUpVC: UITextFieldDelegate {
             textField.layer.borderColor = getColor(color: .neonGreen).cgColor
         }
     }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 0
         textField.backgroundColor = getColor(color: .textFieldBg)
         textField.layer.borderColor = getColor(color: .clear).cgColor
     }
-    
 }
