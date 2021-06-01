@@ -56,8 +56,9 @@ class SignUpVC: UIViewController {
                                 print("Data saved successfully!")
                             }
                         }
-                        let vc =  self.storyboard!.instantiateViewController(withIdentifier: "GetUserInfoVC") as! GetUserInfoVC
+                        let vc =  self.storyboard!.instantiateViewController(withIdentifier: ViewControllers.saveUserInfo) as! GetUserInfoVC
                         self.present(vc, animated: true, completion: nil)
+                        userDefaults?.set("1", forKey: UserDefaultsManager.login)
                     }
                     else {
                         /// if any error occur during creating a user present banner
@@ -204,18 +205,20 @@ extension SignUpVC {
                             self.containerView2.alpha = 0
                       })
         
-        self.spinnerLabel.attributedText = NSMutableAttributedString()
-            .bold14("LOGGING YOU IN...")
-        self.spinnerLabel.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 150, height: 40)
-        self.spinnerLabel.center.x = self.view.center.x
-        self.spinnerLabel.center.y = self.view.center.y + 20
-        self.spinnerLabel.textAlignment = .center
-        
-        self.spinner.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 30, height: 30)
-        self.spinner.center = CGPoint(x: self.view.frame.size.width  / 2, y: (self.view.frame.size.height / 2)-20)
-        self.view.addSubview(self.spinnerLabel)
-        self.view.addSubview(self.spinner)
-        self.spinner.animate()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
+            self.spinnerLabel.attributedText = NSMutableAttributedString()
+                .bold14("CREATING YOUR ACCOUNT...")
+            self.spinnerLabel.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 150, height: 40)
+            self.spinnerLabel.center.x = self.view.center.x
+            self.spinnerLabel.center.y = self.view.center.y + 20
+            self.spinnerLabel.textAlignment = .center
+            
+            self.spinner.frame = CGRect(x: self.view.frame.size.width  / 2, y: self.view.frame.size.height / 2, width: 30, height: 30)
+            self.spinner.center = CGPoint(x: self.view.frame.size.width  / 2, y: (self.view.frame.size.height / 2)-20)
+            self.view.addSubview(self.spinnerLabel)
+            self.view.addSubview(self.spinner)
+            self.spinner.animate()
+        })
     }
     func stopLoader() {
         containerView.alpha = 0

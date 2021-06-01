@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 struct Fonts {
-    
     static let regular = "PlusJakartaSans-Regular"
     static let italic = "PlusJakartaSans-Italic"
     static let extraLight = "PlusJakartaSans-ExtraLight"
@@ -25,11 +23,27 @@ struct Fonts {
 }
 
 struct Colors {
-    
     static let blueBgColor = "blueBgColor"
 }
 
 struct CollectionViews {
-    
     static let onboaringCell = "OnboaringCVCell"
+    static let categoryCell = "CategoryCell"
+    static let cartCell = "CartCollectionCell"
+}
+
+struct UserDefaultsManager {
+    static let login = "loginState"
+}
+
+struct ViewControllers {
+    static let onboarding = "OnboardingVC"
+    static let signUp = "SignUpVC"
+    static let saveUserInfo = "GetUserInfoVC"
+    static let resetPassword = "ResetPasswordVC"
+}
+
+struct SegueManager {
+    static let signUp = "signed up"
+    static let signIn = "signed in"
 }

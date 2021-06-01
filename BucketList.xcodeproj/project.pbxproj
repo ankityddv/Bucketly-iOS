@@ -20,6 +20,7 @@
 		367EF54926385684005215AE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54826385684005215AE /* Colors.swift */; };
 		367EF54D2638601B005215AE /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367EF54C2638601B005215AE /* Spinner.swift */; };
 		3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685A37F2630429C00D48167 /* AttributedFontExtention.swift */; };
+		3687217C266620C000C1F05B /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687217B266620BF00C1F05B /* LoginState.swift */; };
 		368A28E1263982CD0001A130 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A28E0263982CD0001A130 /* ResetPasswordVC.swift */; };
 		369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */; };
 		36B508E4266432060018B527 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E3266432060018B527 /* CartViewController.swift */; };
@@ -71,6 +72,7 @@
 		367EF54826385684005215AE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		367EF54C2638601B005215AE /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		3685A37F2630429C00D48167 /* AttributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedFontExtention.swift; sourceTree = "<group>"; };
+		3687217B266620BF00C1F05B /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		368A28E0263982CD0001A130 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringCVCell.swift; sourceTree = "<group>"; };
 		36B508E3266432060018B527 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3687217A266620AE00C1F05B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3687217B266620BF00C1F05B /* LoginState.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		369CEF3A26304A5D009A6A17 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +213,7 @@
 		36B508E2266431A70018B527 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3687217A266620AE00C1F05B /* Services */,
 				36B508E3266432060018B527 /* CartViewController.swift */,
 				36B508E5266432140018B527 /* SettingsViewController.swift */,
 				36B508E7266432220018B527 /* ProfileViewController.swift */,
@@ -433,6 +444,7 @@
 				3604307926354C0900603C5F /* CheatSheet.swift in Sources */,
 				36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */,
 				367EF54926385684005215AE /* Colors.swift in Sources */,
+				3687217C266620C000C1F05B /* LoginState.swift in Sources */,
 				36D412E726368ABC003758FD /* Banner.swift in Sources */,
 				36B508E8266432220018B527 /* ProfileViewController.swift in Sources */,
 				3664769226341CBE00767AA6 /* DropShadow.swift in Sources */,

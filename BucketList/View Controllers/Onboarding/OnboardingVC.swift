@@ -22,7 +22,7 @@ class OnboardingVC: UIViewController {
     @IBAction func getStartedDidTap(_ sender: Any) {
         lightImpactHaptic()
         animateButton(TDCBttn: self.getStartedBttn)
-        let vc = self.storyboard?.instantiateViewController(identifier: "SignUpVC") as! SignUpVC
+        let vc = self.storyboard?.instantiateViewController(identifier: ViewControllers.signUp) as! SignUpVC
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -52,10 +52,6 @@ class OnboardingVC: UIViewController {
         // pageControl
         pageControll.hidesForSinglePage = true
         self.pageControll.numberOfPages = 3//procedures.count
-        
-        UIApplication.shared.windows.forEach { window in
-            window.overrideUserInterfaceStyle = .dark
-        }
     }
 
 
