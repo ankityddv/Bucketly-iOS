@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		149275FFA4C9D40549C80393 /* Pods_BucketList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91CC5EBF2DDF5D46642263A /* Pods_BucketList.framework */; };
 		3604307926354C0900603C5F /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3604307826354C0900603C5F /* CheatSheet.swift */; };
 		366476792634116B00767AA6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476782634116B00767AA6 /* SignUpVC.swift */; };
 		3664767C2634117800767AA6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664767B2634117800767AA6 /* SignInVC.swift */; };
@@ -23,6 +22,9 @@
 		3685A3802630429C00D48167 /* AttributedFontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685A37F2630429C00D48167 /* AttributedFontExtention.swift */; };
 		368A28E1263982CD0001A130 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A28E0263982CD0001A130 /* ResetPasswordVC.swift */; };
 		369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */; };
+		36B508E4266432060018B527 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E3266432060018B527 /* CartViewController.swift */; };
+		36B508E6266432150018B527 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E5266432140018B527 /* SettingsViewController.swift */; };
+		36B508E8266432220018B527 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E7266432220018B527 /* ProfileViewController.swift */; };
 		36B7DA8A26304004007F8487 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */; };
 		36B7DA9226304037007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8D26304035007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
 		36B7DA9326304037007F8487 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8E26304036007F8487 /* PlusJakartaSans-ExtraLight.ttf */; };
@@ -48,9 +50,12 @@
 		36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36DA43B6262F2744009BA260 /* BucketList.xcdatamodeld */; };
 		36DA43BA262F2746009BA260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36DA43B9262F2746009BA260 /* Assets.xcassets */; };
 		36DA43BD262F2746009BA260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36DA43BB262F2746009BA260 /* LaunchScreen.storyboard */; };
+		36F701D02663F82E002EB9E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36F701CF2663F82D002EB9E2 /* GoogleService-Info.plist */; };
+		B468463199495AE18F9B3F43 /* Pods_Bucketly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB861BFAD55405CE54C7B77 /* Pods_Bucketly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B8DB6957E5B4074374F4A8D /* Pods-Bucketly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bucketly.debug.xcconfig"; path = "Target Support Files/Pods-Bucketly/Pods-Bucketly.debug.xcconfig"; sourceTree = "<group>"; };
 		2FEE38403D55CE9CE20F8FE0 /* Pods-BucketList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.release.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.release.xcconfig"; sourceTree = "<group>"; };
 		30D412906C0CA7497C3A1CD5 /* Pods-BucketList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.debug.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.debug.xcconfig"; sourceTree = "<group>"; };
 		3604307826354C0900603C5F /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
@@ -68,6 +73,9 @@
 		3685A37F2630429C00D48167 /* AttributedFontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedFontExtention.swift; sourceTree = "<group>"; };
 		368A28E0263982CD0001A130 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringCVCell.swift; sourceTree = "<group>"; };
+		36B508E3266432060018B527 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		36B508E5266432140018B527 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		36B508E7266432220018B527 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		36B7DA8D26304035007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		36B7DA8E26304036007F8487 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -95,7 +103,9 @@
 		36DA43B9262F2746009BA260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36DA43BC262F2746009BA260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36DA43BE262F2746009BA260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D91CC5EBF2DDF5D46642263A /* Pods_BucketList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BucketList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F701CF2663F82D002EB9E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8013C832CA4C7828C77E3F99 /* Pods-Bucketly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bucketly.release.xcconfig"; path = "Target Support Files/Pods-Bucketly/Pods-Bucketly.release.xcconfig"; sourceTree = "<group>"; };
+		DAB861BFAD55405CE54C7B77 /* Pods_Bucketly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bucketly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				149275FFA4C9D40549C80393 /* Pods_BucketList.framework in Frameworks */,
+				B468463199495AE18F9B3F43 /* Pods_Bucketly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +145,7 @@
 				36DA43AD262F2744009BA260 /* AppDelegate.swift */,
 				36DA43AF262F2744009BA260 /* SceneDelegate.swift */,
 				36DA43B9262F2746009BA260 /* Assets.xcassets */,
+				36F701CF2663F82D002EB9E2 /* GoogleService-Info.plist */,
 				36DA43BE262F2746009BA260 /* Info.plist */,
 			);
 			path = Services;
@@ -143,6 +154,7 @@
 		36615C10262F2855004126CC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36B508E2266431A70018B527 /* Main */,
 				369CEF3A26304A5D009A6A17 /* Onboarding */,
 				3664767E2634117E00767AA6 /* Auth */,
 			);
@@ -186,6 +198,16 @@
 				369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		36B508E2266431A70018B527 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				36B508E3266432060018B527 /* CartViewController.swift */,
+				36B508E5266432140018B527 /* SettingsViewController.swift */,
+				36B508E7266432220018B527 /* ProfileViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		36B7DA8C26304014007F8487 /* Fonts */ = {
@@ -253,6 +275,8 @@
 			children = (
 				30D412906C0CA7497C3A1CD5 /* Pods-BucketList.debug.xcconfig */,
 				2FEE38403D55CE9CE20F8FE0 /* Pods-BucketList.release.xcconfig */,
+				0B8DB6957E5B4074374F4A8D /* Pods-Bucketly.debug.xcconfig */,
+				8013C832CA4C7828C77E3F99 /* Pods-Bucketly.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -260,7 +284,7 @@
 		FC7DCC956C695B1F01E10318 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D91CC5EBF2DDF5D46642263A /* Pods_BucketList.framework */,
+				DAB861BFAD55405CE54C7B77 /* Pods_Bucketly.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,6 +357,7 @@
 				36B7DA9D26304043007F8487 /* PlusJakartaSans-Regular.ttf in Resources */,
 				36B7DA9E26304043007F8487 /* PlusJakartaSans-Light.ttf in Resources */,
 				36B7DA9526304037007F8487 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
+				36F701D02663F82E002EB9E2 /* GoogleService-Info.plist in Resources */,
 				36DA43BA262F2746009BA260 /* Assets.xcassets in Resources */,
 				36B7DA9426304037007F8487 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */,
 				36B7DAA226304043007F8487 /* PlusJakartaSans-LightItalic.ttf in Resources */,
@@ -351,15 +376,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BucketList/Pods-BucketList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Bucketly/Pods-Bucketly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BucketList/Pods-BucketList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Bucketly/Pods-Bucketly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BucketList/Pods-BucketList-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bucketly/Pods-Bucketly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E32BDA08D909E6EE91FCAD17 /* [CP] Check Pods Manifest.lock */ = {
@@ -377,7 +402,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BucketList-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bucketly-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -397,6 +422,7 @@
 				366476812634161300767AA6 /* TDCTextField.swift in Sources */,
 				36DA43B2262F2744009BA260 /* OnboardingVC.swift in Sources */,
 				3664767C2634117800767AA6 /* SignInVC.swift in Sources */,
+				36B508E4266432060018B527 /* CartViewController.swift in Sources */,
 				36647684263419BE00767AA6 /* AuthState.swift in Sources */,
 				369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */,
 				367EF54D2638601B005215AE /* Spinner.swift in Sources */,
@@ -408,6 +434,7 @@
 				36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */,
 				367EF54926385684005215AE /* Colors.swift in Sources */,
 				36D412E726368ABC003758FD /* Banner.swift in Sources */,
+				36B508E8266432220018B527 /* ProfileViewController.swift in Sources */,
 				3664769226341CBE00767AA6 /* DropShadow.swift in Sources */,
 				36DA43AE262F2744009BA260 /* AppDelegate.swift in Sources */,
 				36DA43B0262F2744009BA260 /* SceneDelegate.swift in Sources */,
@@ -416,6 +443,7 @@
 				367EF54626384A28005215AE /* BannerState.swift in Sources */,
 				3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */,
 				36D412F026369137003758FD /* BannerPresets.swift in Sources */,
+				36B508E6266432150018B527 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +587,7 @@
 		};
 		36DA43C2262F2746009BA260 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30D412906C0CA7497C3A1CD5 /* Pods-BucketList.debug.xcconfig */;
+			baseConfigurationReference = 0B8DB6957E5B4074374F4A8D /* Pods-Bucketly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -581,7 +609,7 @@
 		};
 		36DA43C3262F2746009BA260 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FEE38403D55CE9CE20F8FE0 /* Pods-BucketList.release.xcconfig */;
+			baseConfigurationReference = 8013C832CA4C7828C77E3F99 /* Pods-Bucketly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

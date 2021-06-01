@@ -1,0 +1,6 @@
+framework module Pods_Bucketly {
+  umbrella header "Pods-Bucketly-umbrella.h"
+
+  export *
+  module * { export * }
+}

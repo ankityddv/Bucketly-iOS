@@ -9,5 +9,9 @@ target 'Bucketly' do
     pod 'Hero'
     pod "Gemini"
     pod 'SPAlert'
-
+    pod 'Firebase/Analytics'
+    pod 'Firebase'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
 end

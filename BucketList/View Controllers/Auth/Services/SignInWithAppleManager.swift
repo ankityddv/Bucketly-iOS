@@ -9,14 +9,12 @@ import Foundation
 import AuthenticationServices
 
 struct SignInWithAppleManager {
-    
     static let userIdentifierKey = "userIdentifier"
     static let userFirstNameKey = "userFirstName"
     static let userEmailKey = "userEmail"
     static let userProfileImageKey = "userProfileImage"
     
     static func checkUserAuth(completion: @escaping (AuthState) -> ()) {
-        
         guard let userIdentifier = userDefaults?.string(forKey: userIdentifierKey) else {
             print("User identifier does not exist")
             completion(.undefined)
@@ -51,7 +49,5 @@ struct SignInWithAppleManager {
                 }
             }
         }
-        
     }
-    
 }

@@ -20,8 +20,7 @@ class OnboardingVC: UIViewController {
     
     //MARK:- IBAction
     @IBAction func getStartedDidTap(_ sender: Any) {
-        
-        lightImpactHeptic()
+        lightImpactHaptic()
         animateButton(TDCBttn: self.getStartedBttn)
         let vc = self.storyboard?.instantiateViewController(identifier: "SignUpVC") as! SignUpVC
         self.present(vc, animated: true, completion: nil)
@@ -41,7 +40,6 @@ class OnboardingVC: UIViewController {
    }
     
     //MARK:- Configure
-    
     func configure() {
         titleLabel.attributedText = NSMutableAttributedString()
             .regular20("Welcome to\n")
@@ -66,18 +64,15 @@ class OnboardingVC: UIViewController {
 extension OnboardingVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell: OnboaringCVCell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViews.onboaringCell, for: indexPath) as! OnboaringCVCell
         return cell
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         self.collectionView.animateVisibleCells()
         _ = CGPoint(x: scrollView.contentOffset.x + (scrollView.frame.width / 2), y: (scrollView.frame.height / 2))
         
@@ -138,7 +133,6 @@ extension OnboardingVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
         if let cell = cell as? OnboaringCVCell {
             self.collectionView.animateCell(cell)
         }

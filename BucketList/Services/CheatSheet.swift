@@ -27,28 +27,28 @@ func currentIphone() -> iPhoneModel{
 //MARK:- Heptic Generators
 let generator = UINotificationFeedbackGenerator()
 
-func warningHeptic(){
+func warningHaptic(){
     generator.notificationOccurred(.warning)
 }
-func successHeptic() {
+func successHaptic() {
     generator.notificationOccurred(.success)
 }
-func errorHeptic() {
+func errorHaptic() {
     generator.notificationOccurred(.error)
 }
-func lightImpactHeptic(){
+func lightImpactHaptic(){
     let generator = UIImpactFeedbackGenerator(style: .light)
     generator.impactOccurred()
 }
-func mediumImpactHeptic(){
+func mediumImpactHaptic(){
     let generator = UIImpactFeedbackGenerator(style: .medium)
     generator.impactOccurred()
 }
-func heavyImpactHeptic(){
+func heavyImpactHaptic(){
     let generator = UIImpactFeedbackGenerator(style: .heavy)
     generator.impactOccurred()
 }
-func selectionChangedHeptic(){
+func selectionChangedHaptic(){
     let generator = UISelectionFeedbackGenerator()
     generator.selectionChanged()
 }

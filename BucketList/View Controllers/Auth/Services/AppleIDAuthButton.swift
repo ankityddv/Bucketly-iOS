@@ -8,7 +8,6 @@
 import UIKit
 import AuthenticationServices
 
-
 // MARK:- Currently not in use anywhere
 @IBDesignable
 class AppleIDAuthButton: UIButton {
