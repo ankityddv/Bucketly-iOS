@@ -15,6 +15,8 @@ enum LoginState {
 func getLoginState() -> LoginState {
     if userDefaults?.object(forKey: UserDefaultsManager.login) == nil {
         return .isLoggedOut
+    } else if UserDefaultsManager.login.fetchUserDefault() == "0" {
+        return .isLoggedOut
     } else {
         return .isLoggedIn
     }

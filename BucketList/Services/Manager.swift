@@ -29,7 +29,7 @@ struct Colors {
 struct CollectionViews {
     static let onboaringCell = "OnboaringCVCell"
     static let categoryCell = "CategoryCell"
-    static let cartCell = "CartCollectionCell"
+    static let productsCell = "ProductsCell"
 }
 
 struct UserDefaultsManager {
@@ -41,6 +41,7 @@ struct ViewControllers {
     static let signUp = "SignUpVC"
     static let saveUserInfo = "GetUserInfoVC"
     static let resetPassword = "ResetPasswordVC"
+    static let profile = "ProfileViewController"
 }
 
 struct SegueManager {

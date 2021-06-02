@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3604307926354C0900603C5F /* CheatSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3604307826354C0900603C5F /* CheatSheet.swift */; };
+		362A79112667A1EC002E703D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A79102667A1EC002E703D /* SettingsViewController.swift */; };
+		362A79132667A94F002E703D /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362A79122667A94E002E703D /* UIKit+Extensions.swift */; };
 		366476792634116B00767AA6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476782634116B00767AA6 /* SignUpVC.swift */; };
 		3664767C2634117800767AA6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664767B2634117800767AA6 /* SignInVC.swift */; };
 		366476812634161300767AA6 /* TDCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366476802634161300767AA6 /* TDCTextField.swift */; };
@@ -24,7 +26,6 @@
 		368A28E1263982CD0001A130 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A28E0263982CD0001A130 /* ResetPasswordVC.swift */; };
 		369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */; };
 		36B508E4266432060018B527 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E3266432060018B527 /* CartViewController.swift */; };
-		36B508E6266432150018B527 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E5266432140018B527 /* SettingsViewController.swift */; };
 		36B508E8266432220018B527 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B508E7266432220018B527 /* ProfileViewController.swift */; };
 		36B7DA8A26304004007F8487 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */; };
 		36B7DA9226304037007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B7DA8D26304035007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
@@ -60,6 +61,9 @@
 		2FEE38403D55CE9CE20F8FE0 /* Pods-BucketList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.release.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.release.xcconfig"; sourceTree = "<group>"; };
 		30D412906C0CA7497C3A1CD5 /* Pods-BucketList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketList.debug.xcconfig"; path = "Target Support Files/Pods-BucketList/Pods-BucketList.debug.xcconfig"; sourceTree = "<group>"; };
 		3604307826354C0900603C5F /* CheatSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheet.swift; sourceTree = "<group>"; };
+		362A79102667A1EC002E703D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		362A79122667A94E002E703D /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		365216BB2668093B007FEF05 /* Bucketly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bucketly.entitlements; sourceTree = "<group>"; };
 		366476782634116B00767AA6 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		3664767B2634117800767AA6 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		366476802634161300767AA6 /* TDCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCTextField.swift; sourceTree = "<group>"; };
@@ -76,7 +80,6 @@
 		368A28E0263982CD0001A130 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		369CEF3726304A52009A6A17 /* OnboaringCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringCVCell.swift; sourceTree = "<group>"; };
 		36B508E3266432060018B527 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		36B508E5266432140018B527 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		36B508E7266432220018B527 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		36B7DA8926304004007F8487 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		36B7DA8D26304035007F8487 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 				36B7DAA4263040B2007F8487 /* Manager.swift */,
 				3664768E26341AD200767AA6 /* UserDefaults.swift */,
 				366476802634161300767AA6 /* TDCTextField.swift */,
+				362A79122667A94E002E703D /* UIKit+Extensions.swift */,
 				36DA43AD262F2744009BA260 /* AppDelegate.swift */,
 				36DA43AF262F2744009BA260 /* SceneDelegate.swift */,
 				36DA43B9262F2746009BA260 /* Assets.xcassets */,
@@ -215,7 +219,7 @@
 			children = (
 				3687217A266620AE00C1F05B /* Services */,
 				36B508E3266432060018B527 /* CartViewController.swift */,
-				36B508E5266432140018B527 /* SettingsViewController.swift */,
+				362A79102667A1EC002E703D /* SettingsViewController.swift */,
 				36B508E7266432220018B527 /* ProfileViewController.swift */,
 			);
 			path = Main;
@@ -255,6 +259,7 @@
 		36DA43A1262F2744009BA260 = {
 			isa = PBXGroup;
 			children = (
+				365216BB2668093B007FEF05 /* Bucketly.entitlements */,
 				36DA43AC262F2744009BA260 /* BucketList */,
 				36DA43AB262F2744009BA260 /* Products */,
 				7F4788524E7CDFB0A6C1C236 /* Pods */,
@@ -431,9 +436,11 @@
 				368A28E1263982CD0001A130 /* ResetPasswordVC.swift in Sources */,
 				366476792634116B00767AA6 /* SignUpVC.swift in Sources */,
 				366476812634161300767AA6 /* TDCTextField.swift in Sources */,
+				362A79112667A1EC002E703D /* SettingsViewController.swift in Sources */,
 				36DA43B2262F2744009BA260 /* OnboardingVC.swift in Sources */,
 				3664767C2634117800767AA6 /* SignInVC.swift in Sources */,
 				36B508E4266432060018B527 /* CartViewController.swift in Sources */,
+				362A79132667A94F002E703D /* UIKit+Extensions.swift in Sources */,
 				36647684263419BE00767AA6 /* AuthState.swift in Sources */,
 				369CEF3826304A52009A6A17 /* OnboaringCVCell.swift in Sources */,
 				367EF54D2638601B005215AE /* Spinner.swift in Sources */,
@@ -455,7 +462,6 @@
 				367EF54626384A28005215AE /* BannerState.swift in Sources */,
 				3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */,
 				36D412F026369137003758FD /* BannerPresets.swift in Sources */,
-				36B508E6266432150018B527 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bucketly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = "$(SRCROOT)/BucketList/Services/Info.plist";
@@ -625,6 +632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bucketly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JL7UZ93S3L;
 				INFOPLIST_FILE = "$(SRCROOT)/BucketList/Services/Info.plist";

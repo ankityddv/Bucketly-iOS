@@ -65,7 +65,7 @@ extension SignInVC {
             self.presentBanner("Please enter the email and password!", .error, {
                                 print("Working now")})
         }
-        else{
+        else {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil{
                     self.performSegue(withIdentifier: SegueManager.signIn, sender: self)
