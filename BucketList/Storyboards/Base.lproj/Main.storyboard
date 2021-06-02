@@ -912,7 +912,7 @@ Get your ass here</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_Mock" translatesAutoresizingMaskIntoConstraints="NO" id="rkU-9R-K0K">
-                                        <rect key="frame" x="117" y="146.5" width="180" height="180"/>
+                                        <rect key="frame" x="117" y="144.5" width="180" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="RRO-WO-hpg"/>
                                             <constraint firstAttribute="width" constant="180" id="yO0-VT-Jgy"/>
@@ -924,7 +924,7 @@ Get your ass here</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-nQ-4la">
-                                        <rect key="frame" x="179" y="46" width="56.5" height="26.5"/>
+                                        <rect key="frame" x="181.5" y="46" width="51.5" height="24.5"/>
                                         <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
