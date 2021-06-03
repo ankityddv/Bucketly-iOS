@@ -80,7 +80,6 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         configureFuncs()
-//        fetchProfileImage()
     }
     override func viewWillAppear(_ animated: Bool) {
         lightImpactHaptic()
@@ -99,6 +98,7 @@ extension CartViewController {
         configureNavBar()
         setUpTabBar()
         configureAppTheme()
+        fetchAd()
     }
     func configureNavBar() {
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
@@ -124,21 +124,56 @@ extension CartViewController {
             window.overrideUserInterfaceStyle = .dark
         }
     }
-    func fetchProfileImage() {
-        // Retrive image
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let storageRef = Storage.storage().reference().child("user/profile")
-        let imageRef = storageRef.child("\(uid).png")
-        imageRef.getData(maxSize: 1*1000*1000) { (data,error) in
-            if error == nil {
-//                self.profileBttn.setImage(UIImage(data: data!), for: .normal)
-//                self.profileBttn.frame.size = CGSize(width: 46, height: 46)
-//                self.profileBttn.layer.cornerRadius = 23
-                print("Loaded")
+}
+
+// TO LOAD AD
+extension CartViewController {
+    func fetchAd() {
+        let ref = Database.database().reference()
+        
+        /// check if `ad` is to be presented or not
+        ref.child("ad/isVisible").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let val = value?["value"] as? String ?? ""
+            if val == "Yes" {
+                /// get the `identifier` of which ad to present
+                ref.child("ad").child("childID").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let value = snapshot.value as? NSDictionary
+                    let identifier = value?["ID"] as? String ?? ""
+                    ref.child("ad/campaign").child(identifier).observeSingleEvent(of: .value, with: { (snapshot) in
+                        let value = snapshot.value as? NSDictionary
+                        let title = value?["title"] as? String ?? ""
+                        let message = value?["message"] as? String ?? ""
+                        // load image
+                        let storageRef = Storage.storage().reference().child("ad")
+                        let imageRef = storageRef.child("\(identifier).png")
+                        imageRef.getData(maxSize: 1*1000*1000) { (data,error) in
+                            if error == nil {
+                                self.displayAd(title: title, message: message, image: UIImage(data: data!)!)
+                            }
+                            else {
+                                print(error?.localizedDescription ?? error as Any)
+                            }
+                        }
+                    }) { (error) in
+                        print(error.localizedDescription)
+                    }
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
             }
-            else{
-                print(error?.localizedDescription ?? error as Any)
-            }
+        }) { (error) in
+            print(error.localizedDescription)
         }
+    }
+    func displayAd(title: String, message: String, image: UIImage) {
+//        let imageView = UIImageView()
+//        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+//        imageView.image = image
+//        productsCV.addSubview(imageView)
+//
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

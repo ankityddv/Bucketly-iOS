@@ -52,6 +52,7 @@
 		36DA43B8262F2744009BA260 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36DA43B6262F2744009BA260 /* BucketList.xcdatamodeld */; };
 		36DA43BA262F2746009BA260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36DA43B9262F2746009BA260 /* Assets.xcassets */; };
 		36DA43BD262F2746009BA260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36DA43BB262F2746009BA260 /* LaunchScreen.storyboard */; };
+		36E701D72669708B0098FBF2 /* FirebaseFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E701D62669708B0098FBF2 /* FirebaseFunc.swift */; };
 		36F701D02663F82E002EB9E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36F701CF2663F82D002EB9E2 /* GoogleService-Info.plist */; };
 		B468463199495AE18F9B3F43 /* Pods_Bucketly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB861BFAD55405CE54C7B77 /* Pods_Bucketly.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		36DA43B9262F2746009BA260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36DA43BC262F2746009BA260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36DA43BE262F2746009BA260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E701D62669708B0098FBF2 /* FirebaseFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunc.swift; sourceTree = "<group>"; };
 		36F701CF2663F82D002EB9E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8013C832CA4C7828C77E3F99 /* Pods-Bucketly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bucketly.release.xcconfig"; path = "Target Support Files/Pods-Bucketly/Pods-Bucketly.release.xcconfig"; sourceTree = "<group>"; };
 		DAB861BFAD55405CE54C7B77 /* Pods_Bucketly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bucketly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				3664769126341CBE00767AA6 /* DropShadow.swift */,
 				3604307826354C0900603C5F /* CheatSheet.swift */,
 				36B7DAA4263040B2007F8487 /* Manager.swift */,
+				36E701D62669708B0098FBF2 /* FirebaseFunc.swift */,
 				3664768E26341AD200767AA6 /* UserDefaults.swift */,
 				366476802634161300767AA6 /* TDCTextField.swift */,
 				362A79122667A94E002E703D /* UIKit+Extensions.swift */,
@@ -460,6 +463,7 @@
 				36D412E226368305003758FD /* GetUserInfoVC.swift in Sources */,
 				3664768F26341AD200767AA6 /* UserDefaults.swift in Sources */,
 				367EF54626384A28005215AE /* BannerState.swift in Sources */,
+				36E701D72669708B0098FBF2 /* FirebaseFunc.swift in Sources */,
 				3664768C26341A6000767AA6 /* AppleIDAuthButton.swift in Sources */,
 				36D412F026369137003758FD /* BannerPresets.swift in Sources */,
 			);
