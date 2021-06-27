@@ -6,7 +6,9 @@
 
 ### Author: [@ankiyddv](https://twitter.com/ankityddv)
 
-Dinero is an app for keeping track of your subscriptions. 
+Building in public (yet to finish the project).
+
+Bucketly is an app to add products from multiple e-commerce websites to your bucket list and share with your friends and family and get things done together.
 
 [![Available on the App Store](http://cl.ly/WouG/Download_on_the_App_Store_Badge_US-UK_135x40.svg)](https://apps.apple.com/us/app/dinero-subscription-manager/id1545370811)
 
@@ -17,7 +19,7 @@ Available for [iOS](https://apps.apple.com/us/app/dinero-subscription-manager/id
 
 ## Contributing Bug Reports
 
-We use GitHub for bug tracking. Please search [existing issues](https://github.com/ankityddv/Bucket-ios/issues) and create a new one if the issue is not yet tracked. 
+We use GitHub for bug tracking. Please search [existing issues](https://github.com/ankityddv/Bucketly-ios/issues) and create a new one if the issue is not yet tracked. 
 
 ## License
 
